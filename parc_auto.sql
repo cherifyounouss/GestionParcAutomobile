@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Dim 11 Février 2018 à 11:34
+-- Généré le :  Dim 11 Février 2018 à 12:03
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -111,6 +111,7 @@ CREATE TABLE IF NOT EXISTS `vehicule` (
   `date_mise_en_service` date NOT NULL,
   `date_visite_technique` date NOT NULL,
   `modele` varchar(255) NOT NULL,
+  `etat` enum('bon','passable','médiocre','vétuste') NOT NULL DEFAULT 'bon',
   PRIMARY KEY (`id`),
   KEY `modele` (`modele`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
